@@ -89,7 +89,6 @@ class ProductController extends Controller
             Image::make($request->get('image'))->save(public_path('uploads/urunler/').$name);
         }
 
-        dd($name);
         $product = Product::find($request->get('id'));
         $product->product_name = $request->get('product_name');
         $product->slug = $request->get('slug');
